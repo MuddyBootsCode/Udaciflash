@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
 import { List, Card } from 'react-native-elements'
 import { connect } from 'react-redux'
-import { fetchAllDecks } from "../actions";
+import { fetchAllDecks } from "../actions"
+import _ from 'lodash'
 
 
 class DecksView extends Component{
@@ -20,19 +21,23 @@ class DecksView extends Component{
         return(
             <View style={styles.container}>
                 <List>
-                    {Object.keys(decks).map((deckName) => (
-                        <Card
-                            style={styles.cards}
-                            key={deckName}
-                        >
-                            <TouchableOpacity
-                                style={styles.button}
-                                onPress={() => this.props.navigation.navigate('Deck',{ deckName: deckName })}
-                            >
-                                <Text style={styles.text}>{`${decks[deckName].title} (${decks[deckName].questions.length})`}</Text>
-                            </TouchableOpacity>
-                        </Card>
-                    ))}
+                    {
+                        _.map(decks, deck => {
+                                return (
+                                    <Card
+                                        style={styles.cards}
+                                        key={deck.title}
+                                    >
+                                        <TouchableOpacity
+                                            style={styles.button}
+                                            onPress={() => this.props.navigation.navigate('Deck',{ title: deck.title })}
+                                        >
+                                            <Text style={styles.text}>{deck.title} - ({deck.card.length}) </Text>
+                                        </TouchableOpacity>
+                                    </Card>
+                                )
+                        })
+                    }
 
                 </List>
             </View>

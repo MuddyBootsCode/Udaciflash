@@ -1,5 +1,9 @@
 import { ADD_CARD, ADD_DECK, GET_ALL_DECKS} from "../actions";
 
+function decks(state = {},action) {
+    let deck = null
+}
+
 function decks (state = {}, action) {
     switch(action.type) {
         case ADD_DECK :
