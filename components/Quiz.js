@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { StyleSheet, View, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 import { Text, Button } from 'react-native-elements'
@@ -13,7 +13,7 @@ const defaultState = {
     answerShowing: false
 }
 
-class Quiz extends React.Component {
+class Quiz extends Component {
     state = Object.assign({},defaultState)
 
     nextCard() {
