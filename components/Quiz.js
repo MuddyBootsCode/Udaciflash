@@ -109,7 +109,19 @@ const styles = StyleSheet.create({
     },
 
     backButton: {
-        backgroundColor: '#ff0000'
+        backgroundColor: '#ff0000',
+        height: 50,
+        width: '90%',
+        borderRadius: 3,
+        alignItems: 'center',
+        justifyContent: 'center',
+        shadowRadius: 3,
+        shadowOpacity: 0.4,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 3
+        }
     },
 
     answerButton: {
