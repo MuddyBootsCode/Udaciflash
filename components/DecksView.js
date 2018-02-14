@@ -15,24 +15,27 @@ class DecksView extends Component{
     render () {
 
         const { decks } = this.props
-
+        console.log(decks)
         //maybe add apploading
 
         return(
             <View style={styles.container}>
                 <List>
                     {
-                        _.map(decks, deck => {
+
+                        Object.keys(decks).map((deckName) => {
                                 return (
                                     <Card
                                         style={styles.cards}
-                                        key={deck.title}
+                                        key={deckName}
                                     >
                                         <TouchableOpacity
                                             style={styles.button}
-                                            onPress={() => this.props.navigation.navigate('Deck',{ title: deck.title })}
+                                            onPress={() => this.props.navigation.navigate('Deck',{ deckName: deckName })}
                                         >
-                                            <Text style={styles.text}>{deck.title} - ({deck.card.length}) </Text>
+                                            <Text style={styles.text}>{decks[deckName].title} -
+                                            ({decks[deckName].questions.length})
+                                            </Text>
                                         </TouchableOpacity>
                                     </Card>
                                 )

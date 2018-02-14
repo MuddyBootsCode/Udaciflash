@@ -5,7 +5,7 @@ export const DECK_STORAGE_KEY = 'Udacicards:Decks'
 const startDecks = {
     React: {
         title: 'Udacity',
-        card: [
+        questions: [
             {
                 question: 'What is Udacity?',
                 answer: 'A fun place to learn things!'
@@ -18,7 +18,7 @@ const startDecks = {
     },
     JavaScript: {
         title: 'JavaScript',
-        card: [
+        questions: [
             {
                 question: 'What is your favorite Javascript quote?',
                 answer: 'Anything that can be written in Javascript will be!.'

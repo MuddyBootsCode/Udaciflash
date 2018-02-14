@@ -73,13 +73,15 @@ class Quiz extends React.Component {
                 {answerShowing ?
                     <View>
                         <Text h2>{answer}</Text>
-
+                        <Text/>
+                        <Text/>
                         <Button
                             buttonStyle={styles.correctButton}
                             onPress={() => this.correct()}
                             title='Correct'
                         />
-
+                        <Text/>
+                        <Text/>
                         <Button
                             buttonStyle={styles.incorrectButton}
                             onPress={() => this.incorrect()}
@@ -111,15 +113,51 @@ const styles = StyleSheet.create({
     },
 
     answerButton: {
-        backgroundColor: '#ff0000'
+        backgroundColor: '#ff0000',
+        height: 50,
+        width: '90%',
+        borderRadius: 3,
+        alignItems: 'center',
+        justifyContent: 'center',
+        shadowRadius: 3,
+        shadowOpacity: 0.4,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 3
+        }
     },
 
     correctButton: {
-        backgroundColor: '#15ff28'
+        backgroundColor: '#15ff28',
+        height: 50,
+        width: '90%',
+        borderRadius: 3,
+        alignItems: 'center',
+        justifyContent: 'center',
+        shadowRadius: 3,
+        shadowOpacity: 0.4,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 3
+        }
     },
 
     incorrectButton: {
-        backgroundColor: '#f00'
+        backgroundColor: '#f00',
+        height: 50,
+        width: '90%',
+        borderRadius: 3,
+        alignItems: 'center',
+        justifyContent: 'center',
+        shadowRadius: 3,
+        shadowOpacity: 0.4,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 3
+        }
     },
     text: {
         fontSize: 25,
