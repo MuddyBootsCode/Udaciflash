@@ -48,11 +48,11 @@ class Quiz extends React.Component {
                 <View style={styles.container}>
                     <Text h2>You answered {this.state.numCorrect} question(s) correctly out of {questions.length} total.</Text>
 
-                    <TouchableOpacity
+                    <Button
                         buttonStyle={styles.backButton}
                         onPress={() => navigation.navigate('Deck', { deckName })}
                         title={`Back to ${deckName}`} />
-
+                    <Text/>
                     <Button
                         buttonStyle={styles.backButton}
                         onPress={() => this.reset()}
@@ -67,7 +67,7 @@ class Quiz extends React.Component {
 
         return (
             <View style={styles.container}>
-                <Text>{cardNumber} / {questions.length}</Text>
+                <Text style={styles.numbersText}>{cardNumber} / {questions.length}</Text>
                 <Text h2>{question}</Text>
 
                 {answerShowing ?
@@ -105,7 +105,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'stretch',
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
 
     backButton: {
@@ -174,6 +176,9 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 25,
         color: '#fff'
+    },
+    numbersText: {
+        fontSize: 25,
     }
 })
 
