@@ -11,11 +11,11 @@ export function addDeck(deck) {
     }
 }
 
-export function addCard (deckName, card) {
+export function addCard (deckName, question) {
     return {
         type: ADD_CARD,
         deckName,
-        card
+        question
     }
 }
 

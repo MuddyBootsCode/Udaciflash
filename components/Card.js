@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, TextInput, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native'
+import { NavigationActions } from 'react-navigation'
 import { connect } from 'react-redux'
 import { addCardToDeck } from "../actions";
 
@@ -17,7 +18,7 @@ class NewCard extends Component{
         }
         const { deckName } = this.props.navigation.state.params
         this.props.createCard(deckName, card)
-        this.props.navigation.navigate('Deck',{ deckName })
+        this.props.navigation.navigate('Deck',{ deckName: deckName })
     }
 
     render () {

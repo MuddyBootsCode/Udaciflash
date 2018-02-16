@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
-import { List, Card } from 'react-native-elements'
+import { List, ListItem } from 'react-native-elements'
 import { connect } from 'react-redux'
 import { fetchAllDecks } from "../actions"
 import _ from 'lodash'
@@ -25,19 +25,13 @@ class DecksView extends Component{
 
                         Object.keys(decks).map((deckName) => {
                                 return (
-                                    <Card
+                                    <ListItem
                                         style={styles.cards}
                                         key={deckName}
+                                        title={`${decks[deckName].title} (${decks[deckName].questions.length})`}
+                                        onPress={() => this.props.navigation.navigate('Deck',{ deckName: deckName })}
                                     >
-                                        <TouchableOpacity
-                                            style={styles.button}
-                                            onPress={() => this.props.navigation.navigate('Deck',{ deckName: deckName })}
-                                        >
-                                            <Text style={styles.text}>{decks[deckName].title} -
-                                            ({decks[deckName].questions.length})
-                                            </Text>
-                                        </TouchableOpacity>
-                                    </Card>
+                                    </ListItem>
                                 )
                         })
                     }

@@ -12,9 +12,7 @@ class AddDeck extends Component {
 
     //From UdaciFitness code
     toHome = () => {
-        this.props.navigation.dispatch(NavigationActions.back({
-            key: 'AddDeck'
-        }))
+        this.props.navigation.navigate('Deck',{ deckName: this.state.text })
     }
 
     submit () {

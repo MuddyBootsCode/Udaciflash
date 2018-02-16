@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { StyleSheet, View, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 import { Text, Button } from 'react-native-elements'

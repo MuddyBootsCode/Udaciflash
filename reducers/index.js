@@ -9,7 +9,7 @@ function decks (state = {}, action) {
         case ADD_DECK :
             return {
                 ...state,
-                [action.title]: action.deck
+                [action.deck.title]: action.deck
             }
         case ADD_CARD :
             const { deckName, question } = action
