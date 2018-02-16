@@ -5,3 +5,5 @@ To start the project you'll only need to do three things:
 3) Yarn start. 
 
 Enjoy!
+
+I was only able to test the app on IOS. I could not get android to work. 
