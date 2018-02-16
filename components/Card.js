@@ -18,7 +18,7 @@ class NewCard extends Component{
         }
         const { deckName } = this.props.navigation.state.params
         this.props.createCard(deckName, card)
-        this.props.navigation.navigate('Deck',{ deckName: deckName })
+        this.props.navigation.goBack()
     }
 
     render () {

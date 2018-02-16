@@ -6,4 +6,7 @@ To start the project you'll only need to do three things:
 
 Enjoy!
 
+
+This Project is part of Udacity React Nano Degree Program. 
+
 I was only able to test the app on IOS. I could not get android to work. 

@@ -50,7 +50,7 @@ class Quiz extends Component {
 
                     <Button
                         buttonStyle={styles.backButton}
-                        onPress={() => navigation.navigate('Deck', { deckName })}
+                        onPress={() => navigation.goBack()}
                         title={`Back to ${deckName}`} />
                     <Text/>
                     <Button
